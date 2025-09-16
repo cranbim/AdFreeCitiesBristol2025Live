@@ -68,7 +68,7 @@ class AnalysisScreen{
           fill(cols.base.r*rel, cols.base.g*rel, cols.base.b*rel)
           textFont('courier')
           textSize(this.w*0.1)
-          text('selecting target',this.w/2-this.w*0.4, this.h/2-this.w*0.25, this.w*0.8, this.w*0.5)
+          text('targeting adverts',this.w/2-this.w*0.4, this.h/2-this.w*0.25, this.w*0.8, this.w*0.5)
           // pop()
         } else {
           // push()

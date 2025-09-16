@@ -12,7 +12,8 @@ let adW=450, adH=800
 let aX, aY
 
 let resetInterval=1000 * 60 * 5 //5 minutes refresh?
-let reset=setInterval(resetAll, resetInterval)
+// let reset=setInterval(resetAll, resetInterval)
+// let reset=setInterval(function(){location.reload()}, resetInterval)
 
 // const windowFrames={
 //   analysis: {x:50, y:50, w:400, h:700}, 
@@ -72,6 +73,7 @@ let emojiFiles=[{label:"buynow", file:"./media/BuyNowEMOJI.png"},
 ]
 let emojis={}
 let vid
+let videoConstraints
 
 function preload() {
   loadFaceMeshModel()
@@ -118,6 +120,8 @@ function setup() {
 
 function resetAll(){
   console.log(">>>> resetting >>>>")
+  // video=createCapture(videoConstraints);
+  // video.hide()
   as=new AnalysisScreen(windowFrames.analysis, sourceData, cols)
   
   // video = createCapture(VIDEO, { flipped: true });
@@ -142,16 +146,16 @@ function gotDevices(deviceInfos) {
   numDevices=devices.length
   let supportedConstraints = navigator.mediaDevices.getSupportedConstraints();
   console.log(supportedConstraints);
-  constraints = {
+  videoConstraints = {
     flipped: true,
     video: {
-      deviceId: {
-        exact: devices[chosenCameraIndex].id
-      },
+      // deviceId: {
+      //   exact: devices[chosenCameraIndex].id
+      // },
     },
     audio: false
   };
-  video=createCapture(constraints);
+  video=createCapture(videoConstraints);
   video.hide()
   vidW=video.width
   vidH=video.height

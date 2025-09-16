@@ -6,7 +6,7 @@ let sourceData={
       productName: "Druel",
       characteristics: [
         {
-          characteristic: "Big 5 Personality Traits",
+          characteristic: "personality type",
           dimensions:[
             {
               dimension: "openness",
@@ -35,71 +35,67 @@ let sourceData={
             }
           ]
         },{
-          characteristic: "Myers Briggs Type",
+          characteristic: "fitness",
           
           dimensions:[
             {
-              dimension: "Introversion v Extraversion",
-              dataType: "list",
-              dataRange: {digits:5, min:90, max:30000, list:["I", "E"]}
+              dimension: "steps today",
+              dataType: "int",
+              dataRange: {digits:5, min:90, max:30000, list:[]}
             },
             {
-              dimension: "Sensing v Intuition",
-              dataType: "list",
-              dataRange: {digits:5, min:300, max:20000, list:["S","I"]}
+              dimension: "average steps (7 days)",
+              dataType: "int",
+              dataRange: {digits:5, min:300, max:20000, list:[]}
             },
             {
-              dimension: "Thinking v Feeling",
-              dataType: "list",
-              dataRange: {digits:3, min:60, max:138, list:["T","F"]}
+              dimension: "mean waking heart rate",
+              dataType: "int",
+              dataRange: {digits:3, min:60, max:138, list:[]}
             },
             {
-              dimension: "Judging v Perceiving",
-              dataType: "list",
-              dataRange: {digits:2, min:5, max:87, list:["J","P"]}
+              dimension: "stress level",
+              dataType: "percent",
+              dataRange: {digits:2, min:5, max:87, list:[]}
+            },
+            {
+              dimension: "avg active minutes (7 days)",
+              dataType: "int",
+              dataRange: {digits:0, min:10, max:90, list:[]}
             }
           ]
         },{
-          characteristic: "A/B/C/D Personality Type",
+          characteristic: "online activity",
           
           dimensions:[
             {
-              dimension: "Type A",
-              dataType: "percent",
-              dataRange: {digits:0, min:2, max:99, list:[]}
+              dimension: "sites visited",
+              dataType: "int",
+              dataRange: {digits:0, min:2, max:547, list:[]}
             },
             {
-              dimension: "Type B",
+              dimension: "private or vpn",
               dataType: "percent",
-              dataRange: {digits:0, min:2, max:99, list:[]}
+              dataRange: {digits:0, min:0, max:68, list:[]}
             },
             {
-              dimension: "Type C",
-              dataType: "percent",
-              dataRange: {digits:0, min:2, max:99, list:[]}
+              dimension: "posts viewed",
+              dataType: "int",
+              dataRange: {digits:3, min:10, max:1100, list:[]}
             },
             {
-              dimension: "Type D",
-              dataType: "percent",
-              dataRange: {digits:0, min:2, max:99, list:[]}
+              dimension: "post interactions",
+              dataType: "int",
+              dataRange: {digits:0, min:2, max:120, list:[]}
+            },
+            {
+              dimension: "influenceability Q",
+              dataType: "list",
+              dataRange: {digits:0, min:0, max:0, list:['unreachable','very low','low','medium','high','converted']}
             }
           ]
-        },{
-            characteristic: "Influencable",
-            
-            dimensions:[
-              {
-                dimension: "influenceability Q",
-                dataType: "list",
-                dataRange: {digits:0, min:0, max:0, list:['unreachable','very low','low','medium','high','converted']}
-              },
-              {
-                dimension: "Analysis confidence level",
-                dataType: "percent",
-                dataRange: {digits:0, min:10, max:99, list:[]}
-              }
-            ]
-        }
+        },
+        
      ],
       
       
@@ -134,7 +130,7 @@ let sourceData={
       productName: "BlarePods",
       characteristics: [
         {
-          characteristic: "Big 5 Personality Traits",
+          characteristic: "personality type",
           dimensions:[
             {
               dimension: "openness",
@@ -163,71 +159,66 @@ let sourceData={
             }
           ]
         },{
-          characteristic: "Myers Briggs Type",
+          characteristic: "fitness",
           
           dimensions:[
             {
-              dimension: "Introversion v Extraversion",
-              dataType: "list",
-              dataRange: {digits:5, min:90, max:30000, list:["I", "E"]}
+              dimension: "steps today",
+              dataType: "int",
+              dataRange: {digits:5, min:90, max:30000, list:[]}
             },
             {
-              dimension: "Sensing v Intuition",
-              dataType: "list",
-              dataRange: {digits:5, min:300, max:20000, list:["S","I"]}
+              dimension: "average steps (7 days)",
+              dataType: "int",
+              dataRange: {digits:5, min:300, max:20000, list:[]}
             },
             {
-              dimension: "Thinking v Feeling",
-              dataType: "list",
-              dataRange: {digits:3, min:60, max:138, list:["T","F"]}
+              dimension: "mean waking heart rate",
+              dataType: "int",
+              dataRange: {digits:3, min:60, max:138, list:[]}
             },
             {
-              dimension: "Judging v Perceiving",
-              dataType: "list",
-              dataRange: {digits:2, min:5, max:87, list:["J","P"]}
+              dimension: "stress level",
+              dataType: "percent",
+              dataRange: {digits:2, min:5, max:87, list:[]}
+            },
+            {
+              dimension: "avg active minutes (7 days)",
+              dataType: "int",
+              dataRange: {digits:0, min:10, max:90, list:[]}
             }
           ]
         },{
-          characteristic: "A/B/C/D Personality Type",
+          characteristic: "online activity",
           
           dimensions:[
             {
-              dimension: "Type A",
-              dataType: "percent",
-              dataRange: {digits:0, min:2, max:99, list:[]}
+              dimension: "sites visited",
+              dataType: "int",
+              dataRange: {digits:0, min:2, max:547, list:[]}
             },
             {
-              dimension: "Type B",
+              dimension: "private or vpn",
               dataType: "percent",
-              dataRange: {digits:0, min:2, max:99, list:[]}
+              dataRange: {digits:0, min:0, max:68, list:[]}
             },
             {
-              dimension: "Type C",
-              dataType: "percent",
-              dataRange: {digits:0, min:2, max:99, list:[]}
+              dimension: "posts viewed",
+              dataType: "int",
+              dataRange: {digits:3, min:10, max:1100, list:[]}
             },
             {
-              dimension: "Type D",
-              dataType: "percent",
-              dataRange: {digits:0, min:2, max:99, list:[]}
+              dimension: "post interactions",
+              dataType: "int",
+              dataRange: {digits:0, min:2, max:120, list:[]}
+            },
+            {
+              dimension: "influenceability Q",
+              dataType: "list",
+              dataRange: {digits:0, min:0, max:0, list:['unreachable','very low','low','medium','high','converted']}
             }
           ]
-        },{
-            characteristic: "Influencable",
-            
-            dimensions:[
-              {
-                dimension: "influenceability Q",
-                dataType: "list",
-                dataRange: {digits:0, min:0, max:0, list:['unreachable','very low','low','medium','high','converted']}
-              },
-              {
-                dimension: "Analysis confidence level",
-                dataType: "percent",
-                dataRange: {digits:0, min:10, max:99, list:[]}
-              }
-            ]
-        }
+        },
         
      ],
       
@@ -263,7 +254,7 @@ let sourceData={
       productName: "Sike",
       characteristics: [
         {
-          characteristic: "Big 5 Personality Traits",
+          characteristic: "personality type",
           dimensions:[
             {
               dimension: "openness",
@@ -292,71 +283,66 @@ let sourceData={
             }
           ]
         },{
-          characteristic: "Myers Briggs Type",
+          characteristic: "fitness",
           
           dimensions:[
             {
-              dimension: "Introversion v Extraversion",
-              dataType: "list",
-              dataRange: {digits:5, min:90, max:30000, list:["I", "E"]}
+              dimension: "steps today",
+              dataType: "int",
+              dataRange: {digits:5, min:90, max:30000, list:[]}
             },
             {
-              dimension: "Sensing v Intuition",
-              dataType: "list",
-              dataRange: {digits:5, min:300, max:20000, list:["S","I"]}
+              dimension: "average steps (7 days)",
+              dataType: "int",
+              dataRange: {digits:5, min:300, max:20000, list:[]}
             },
             {
-              dimension: "Thinking v Feeling",
-              dataType: "list",
-              dataRange: {digits:3, min:60, max:138, list:["T","F"]}
+              dimension: "mean waking heart rate",
+              dataType: "int",
+              dataRange: {digits:3, min:60, max:138, list:[]}
             },
             {
-              dimension: "Judging v Perceiving",
-              dataType: "list",
-              dataRange: {digits:2, min:5, max:87, list:["J","P"]}
+              dimension: "stress level",
+              dataType: "percent",
+              dataRange: {digits:2, min:5, max:87, list:[]}
+            },
+            {
+              dimension: "avg active minutes (7 days)",
+              dataType: "int",
+              dataRange: {digits:0, min:10, max:90, list:[]}
             }
           ]
         },{
-          characteristic: "A/B/C/D Personality Type",
+          characteristic: "online activity",
           
           dimensions:[
             {
-              dimension: "Type A",
-              dataType: "percent",
-              dataRange: {digits:0, min:2, max:99, list:[]}
+              dimension: "sites visited",
+              dataType: "int",
+              dataRange: {digits:0, min:2, max:547, list:[]}
             },
             {
-              dimension: "Type B",
+              dimension: "private or vpn",
               dataType: "percent",
-              dataRange: {digits:0, min:2, max:99, list:[]}
+              dataRange: {digits:0, min:0, max:68, list:[]}
             },
             {
-              dimension: "Type C",
-              dataType: "percent",
-              dataRange: {digits:0, min:2, max:99, list:[]}
+              dimension: "posts viewed",
+              dataType: "int",
+              dataRange: {digits:3, min:10, max:1100, list:[]}
             },
             {
-              dimension: "Type D",
-              dataType: "percent",
-              dataRange: {digits:0, min:2, max:99, list:[]}
+              dimension: "post interactions",
+              dataType: "int",
+              dataRange: {digits:0, min:2, max:120, list:[]}
+            },
+            {
+              dimension: "influenceability Q",
+              dataType: "list",
+              dataRange: {digits:0, min:0, max:0, list:['unreachable','very low','low','medium','high','converted']}
             }
           ]
-        },{
-            characteristic: "Influencable",
-            
-            dimensions:[
-              {
-                dimension: "influenceability Q",
-                dataType: "list",
-                dataRange: {digits:0, min:0, max:0, list:['unreachable','very low','low','medium','high','converted']}
-              },
-              {
-                dimension: "Analysis confidence level",
-                dataType: "percent",
-                dataRange: {digits:0, min:10, max:99, list:[]}
-              }
-            ]
-        }
+        },
         
      ],
       

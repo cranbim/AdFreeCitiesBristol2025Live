@@ -34,7 +34,8 @@ function startFaceMesh(windowFrame,scl){
   faceMesh.detectStart(video, gotFaces);
   // Get predefined triangle connections
   triangles = faceMesh.getTriangles();
-  cr=new CaptureRunner(5,5,60,30,0.7,20)
+  // cr=new CaptureRunner(5,5,60,30,0.7,20)
+  cr=new CaptureRunner(3,3,60,30,0.7,20)
 }
 
 function runFaceMeshQueue(vidW){
@@ -89,7 +90,7 @@ function runFaceMeshQueue(vidW){
 }
 
 function isQueueEmpty(){
-  console.log(cr.getQueueStats().length)
+  // console.log(cr.getQueueStats().length)
   return cr.getQueueStats().length==0
 }
 
@@ -325,11 +326,16 @@ class CaptureRunner{
       buf.translate(x,y)
       if(this.built){
         // let scl=h*this.frame.scl
-        let xOff=(w-this.frame.frame.width)/2
+        let xOff=0//(w-this.frame.frame.width)/2
         let scl=h/this.frame.frame.height
         buf.scale(scl)
         buf.imageMode(CENTER)
-        buf.image(this.frame.frame,xOff, 0)
+        // buf.image(this.frame.frame,xOff, 0)
+        let arD=w/h
+        let yEff=this.frame.frame.width/arD
+        let yDiff=this.frame.frame.height-yEff
+        let yOff=yDiff/2
+        buf.image(this.frame.frame,0,0,w,h,xOff, yOff,this.frame.frame.width,yEff)
         buf.filter(POSTERIZE,4)
         // buf.filter(THRESHOLD,0.5)
       } else {

@@ -49,7 +49,11 @@ class AdPlayer{
                 noStroke()
                 let rel=sin(frameCount*0.2)*0.5+0.5
                 fill(0+255*rel)
-                text("building ads...", this.w/2, this.h/2)
+                // text("building ads...", this.w/2, this.h/2)
+                text("Please hold,", this.w/2, this.h*0.40)
+                text("satirical", this.w/2, this.h*0.45)
+                text("surveillance capitalism", this.w/2, this.h*0.5)
+                text("in progress...", this.w/2, this.h*0.55)
             }
         }
         
